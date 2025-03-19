@@ -1,0 +1,69 @@
+\documentclass[11pt,a4paper]{article}
+
+% Essential packages
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+
+% Citation manager - BibLaTeX setup with APA style
+\usepackage[
+  backend=biber,
+  style=apa,
+  sortcites=true,
+  sorting=nyt
+]{biblatex}
+\addbibresource{references.bib}
+
+% Text styling
+\usepackage{setspace}
+% Set line spacing to 1.15
+\setstretch{1.15}
+% Set default text size to 11pt
+\fontsize{11pt}{11pt}\selectfont
+
+% Section heading styling - without numbers
+\usepackage{titlesec}
+\titleformat{\section}
+  {\normalfont\Large\bfseries}
+  {}
+  {0em}
+  {}
+  []
+
+\titleformat{\subsection}
+  {\normalfont\large\bfseries}
+  {}
+  {0em}
+  {}
+  []
+
+% Margins
+\usepackage[margin=2.5cm]{geometry}
+
+\begin{document}
+
+% Headline/Title
+\begin{center}
+  \LARGE\textbf{Your Document Title}
+  
+  \large{Author: Firstname Lastname}
+  
+  \normalsize{\today}
+\end{center}
+
+\section{Introduction}
+Cite like this, put references into references.bib: \parencite{reference2023}.
+
+\section{Main Part}
+
+\subsection{First Subtopic}
+
+\subsection{Second Subtopic}
+
+\section{Conclusion}
+
+% Bibliography
+\printbibliography
+
+\end{document}
